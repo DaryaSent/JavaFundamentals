@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 public  class BooksFactory {
     static Logger logger = Logger.getLogger(BooksFactory.class);
 
-
     public static Book createBooks(String[] line) {
         int pages;
         int dateOfPublication;
