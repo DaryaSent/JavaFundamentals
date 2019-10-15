@@ -20,7 +20,7 @@ public class TextReader {
 
     public List<String> textRead(File file) throws TextException {
         try {
-            logger.debug("Reading file");
+            logger.debug("----Reading file----");
             lineReader = new BufferedReader(new java.io.FileReader(file));
 
             if (file.length() == 0) {
@@ -49,11 +49,11 @@ public class TextReader {
                 }
             } catch (IOException e) {
                 logger.error("Mistake while closing "+ e);
-                System.out.println("Проблема закрытия");
+                throw new TextException("Проблема закрытия", e);
             }
         }
 
-        logger.info("File was read successfully");
+        logger.info("----File was read successfully----");
         return list;
     }
 }
