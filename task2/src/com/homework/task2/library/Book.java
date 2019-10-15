@@ -3,7 +3,7 @@ package com.homework.task2.library;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class Book {
+public abstract class Book {
     private BookType type;
     private String name;
     private int pages;
